@@ -27,7 +27,7 @@ while(True):
         resized = resized / 255.0
         resized = resized.reshape(-1, 100, 100, 1)
         prediction_c = model.predict_classes(resized)
-        # 0= background - 1 = backward - 2 = forward - 3 = left - 4 = right - 6 = stop
+        # 0= background - 1 = backward - 2 = forward - 3 = left - 4 = right - 5 = stop
         if(prediction_c != previous_prediction_c):
             previous_prediction_c = prediction_c
             i = f"{prediction_c[0]}"
